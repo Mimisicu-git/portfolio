@@ -17,9 +17,71 @@
     box-shadow: 0 20px 60px rgba(0, 0, 0, 0.28);
 }
 
+.home-hero__orbit {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+}
+
+.tech-float {
+    position: absolute;
+    padding: 0.6rem 1rem;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.04);
+    color: rgba(255, 255, 255, 0.78);
+    font-size: 0.82rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.22);
+    backdrop-filter: blur(8px);
+}
+
+.tech-float--1 {
+    top: 1.2rem;
+    right: 16rem;
+}
+
+.tech-float--2 {
+    top: 3rem;
+    right: 1.5rem;
+}
+
+.tech-float--3 {
+    top: 8rem;
+    right: 17rem;
+}
+
+.tech-float--4 {
+    bottom: 7rem;
+    right: 2rem;
+}
+
+.tech-float--5 {
+    bottom: 2rem;
+    right: 15rem;
+}
+
+.tech-float--6 {
+    top: 1.4rem;
+    left: 54%;
+}
+
+.tech-float--7 {
+    bottom: 8rem;
+    left: 70%;
+}
+
 .home-hero__content {
     position: relative;
     max-width: 760px;
+    z-index: 1;
+}
+
+.home-hero__layout {
+    position: relative;
+    z-index: 1;
+    display: block;
 }
 
 .home-hero__eyebrow {
@@ -82,6 +144,26 @@
     line-height: 1.8;
 }
 
+.tech-stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-top: 1.4rem;
+}
+
+.tech-pill {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.65rem 1rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.05);
+    color: rgba(255, 255, 255, 0.88);
+    font-size: 0.88rem;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+}
+
 @media (max-width: 768px) {
     .home-page {
         width: calc(100% - 1rem);
@@ -100,5 +182,19 @@
 
     .home-card--wide {
         grid-column: auto;
+    }
+
+    .home-hero__orbit {
+        position: relative;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.6rem;
+        margin-bottom: 1.25rem;
+    }
+
+    .tech-float {
+        position: static;
+        font-size: 0.78rem;
+        box-shadow: none;
     }
 }
