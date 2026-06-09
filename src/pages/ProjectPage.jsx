@@ -1,15 +1,66 @@
 import React from 'react';
 import { Header } from '../components/Header';
+import '../Styles/pages/ProjectPage.css';
+import {projects} from '../utils/project_data';
+
 
 const ProjectPage = () => {
+    function redirect(project) {
+            window.location = `/projects/${project.id}`;
+    }
+
     return (
         <>
         <Header />
-        <div>
-            hello world
-        </div>
+        <main className="project-page">
+            <section className="project-hero">
+                <span className="project-hero__eyebrow">Mon evolution</span>
+                <h1>La frise de mes projets</h1>
+                <p>
+                    Evolution au sein de mes projets.
+                </p>
+            </section>
+
+            <section className="project-timeline" aria-label="Frise chronologique des projets">
+
+                {projects.sort((a,b) => b.year - a.year).map((project) => (
+                    <article key={project.id} className="timeline-card">
+                        <div className="timeline-card__year-block">
+                            <span className="timeline-card__year">{project.year}</span>
+                            <span className="timeline-card__dot" aria-hidden="true" />
+                        </div>
+
+                        <div className="timeline-card__content" onClick={() => redirect(project)}>
+                            <div className="timeline-card__header">
+                                <div>
+                                    <span className="timeline-card__status">{project.status}</span>
+                                    <h2>{project.title}</h2>
+                                </div>
+                                <div className="timeline-card__links">
+                                    <a href={project.githubUrl} target="_blank" rel="noreferrer">
+                                        GitHub
+                                    </a>
+                                    {project.liveUrl ? (
+                                        <a href={project.liveUrl} target="_blank" rel="noreferrer">
+                                            Ouvrir le projet
+                                        </a>
+                                    ) : null}
+                                </div>
+                            </div>
+
+                            <p className="timeline-card__intro">{project.shortDescription}</p>
+
+                            <div className="timeline-card__stack" aria-label="Technologies utilisees">
+                                {project.stack.map((tech) => (
+                                    <span key={tech}>{tech}</span>
+                                ))}
+                            </div>
+                        </div>
+                    </article>
+                ))}
+            </section>
+        </main>
         </>
-        
     );
 };
 

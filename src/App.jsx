@@ -6,6 +6,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import HomePage from './pages/HomePage'
 import ProjectPage from './pages/ProjectPage'
 import ContactPage from './pages/ContactPage'
+import DetailsProject from './pages/DetailsProjectPage'
 import { MoodvieRedirect } from './utils/MoodvieRedirect'
 import './App.css'
 
@@ -29,6 +30,10 @@ function App() {
         <Route
           path="/moodvie"
           element={<MoodvieRedirect />}
+        />
+        <Route
+          path="/projects/:id"
+          element={<DetailsProject />}
         />
         
       </Routes>
