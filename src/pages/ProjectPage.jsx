@@ -1,12 +1,14 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import { Header } from '../components/Header';
 import '../Styles/pages/ProjectPage.css';
 import {projects} from '../utils/project_data';
 
 
 const ProjectPage = () => {
+    const navigate = useNavigate();
     function redirect(project) {
-            window.location = `/projects/${project.id}`;
+            navigate(`/projects/${project.id}`);
     }
 
     return (
