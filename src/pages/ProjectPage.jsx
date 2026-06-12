@@ -37,9 +37,11 @@ const ProjectPage = () => {
                                     <h2>{project.title}</h2>
                                 </div>
                                 <div className="timeline-card__links">
+                                    {project.githubUrl ? (
                                     <a href={project.githubUrl} target="_blank" rel="noreferrer">
                                         GitHub
                                     </a>
+                                    ) : null}
                                     {project.liveUrl ? (
                                         <a href={project.liveUrl} target="_blank" rel="noreferrer">
                                             Ouvrir le projet
