@@ -1,0 +1,37 @@
+/* Aurora Soft */
+:root {
+  --color-dark: #f7fbff;
+  --color-dark-light: #ecf4ff;
+  --color-panel: rgba(255, 255, 255, 0.76);
+  --color-panel-strong: rgba(255, 255, 255, 0.92);
+  --color-accent-primary: #7c3aed;
+  --color-accent-secondary: #06b6d4;
+  --color-accent-third: #fb7185;
+  --color-white: #ffffff;
+  --color-text-main: #162032;
+  --color-text-soft: #57657a;
+  --text-main: var(--color-text-main);
+  --text-soft: var(--color-text-soft);
+  --color-border-soft: rgba(22, 32, 50, 0.1);
+  --color-border-accent: rgba(124, 58, 237, 0.22);
+  --shadow-lg: 0 24px 70px rgba(74, 92, 128, 0.16);
+  --shadow-accent: 0 18px 44px rgba(124, 58, 237, 0.18);
+  --radius-xl: 30px;
+  --radius-full: 999px;
+  --transition-smooth: 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes auroraFlow {
+  0%, 100% { transform: translate3d(0, 0, 0) scale(1); }
+  50% { transform: translate3d(-18px, 14px, 0) scale(1.04); }
+}
+
+@keyframes floatSoft {
+  0%, 100% { transform: translateY(0) rotate(var(--tilt)); }
+  50% { transform: translateY(-10px) rotate(var(--tilt)); }
+}
