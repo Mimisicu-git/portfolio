@@ -1,7 +1,4 @@
-import { useState, useEffect } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
-import heroImg from './assets/hero.png'
+import { useEffect } from 'react'
 import { BrowserRouter, Routes, Route, useNavigate } from 'react-router-dom'
 import HomePage from './pages/HomePage'
 import ProjectPage from './pages/ProjectPage'
@@ -49,7 +46,7 @@ function AppContent() {
 
 function App() {
   return (
-    <BrowserRouter basename="/portfolio/">
+    <BrowserRouter basename="/">
       <AppContent />
     </BrowserRouter>
   );
