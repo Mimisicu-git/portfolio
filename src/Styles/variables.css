@@ -1,0 +1,156 @@
+/* ============================================
+   VARIABLES DA - Dark Red Energetic
+   ============================================ */
+
+:root {
+  /* Colors */
+  --color-dark: #0f1419;
+  --color-dark-light: #1a1f26;
+  --color-dark-lighter: #232a33;
+  --color-red-primary: #ff1744;
+  --color-red-vibrant: #ff3860;
+  --color-purple-secondary: #9c27b0;
+  --color-white: #ffffff;
+  --color-text-main: #e5e7eb;
+  --color-text-soft: #9ca3af;
+  --color-border-soft: rgba(255, 255, 255, 0.08);
+  --color-border-red: rgba(255, 23, 68, 0.15);
+
+  /* Shadows */
+  --shadow-sm: 0 6px 16px rgba(0, 0, 0, 0.12);
+  --shadow-md: 0 12px 32px rgba(0, 0, 0, 0.16);
+  --shadow-lg: 0 20px 48px rgba(0, 0, 0, 0.2);
+  --shadow-red: 0 16px 40px rgba(255, 23, 68, 0.2);
+  --shadow-purple: 0 16px 40px rgba(156, 39, 176, 0.12);
+
+  /* Typography */
+  --font-family-base: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Inter', sans-serif;
+  --font-size-base: 1rem;
+  --font-weight-regular: 400;
+  --font-weight-medium: 600;
+  --font-weight-bold: 700;
+  --font-weight-black: 800;
+
+  /* Radius */
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+  --radius-xl: 28px;
+  --radius-full: 999px;
+
+  /* Transitions */
+  --transition-fast: 0.15s ease;
+  --transition-smooth: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-bounce: 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+/* ============================================
+   ANIMATIONS - Scroll & Decorative
+   ============================================ */
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-32px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(32px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes pulse-red {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(255, 23, 68, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 0 8px rgba(255, 23, 68, 0);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-12px);
+  }
+}
+
+@keyframes blob-morph {
+  0% {
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+  }
+  50% {
+    border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
+  }
+  100% {
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+  }
+}
+
+@keyframes glow-red {
+  0%, 100% {
+    filter: drop-shadow(0 0 8px rgba(255, 23, 68, 0.3));
+  }
+  50% {
+    filter: drop-shadow(0 0 16px rgba(255, 23, 68, 0.6));
+  }
+}
+
+/* ============================================
+   INTERSECTION OBSERVER - Scroll Triggers
+   ============================================ */
+
+.fade-in-up {
+  animation: fadeInUp 0.6s var(--transition-smooth) forwards;
+  opacity: 0;
+}
+
+.fade-in-down {
+  animation: fadeInDown 0.6s var(--transition-smooth) forwards;
+  opacity: 0;
+}
+
+.slide-in-left {
+  animation: slideInLeft 0.6s var(--transition-smooth) forwards;
+  opacity: 0;
+}
+
+.slide-in-right {
+  animation: slideInRight 0.6s var(--transition-smooth) forwards;
+  opacity: 0;
+}

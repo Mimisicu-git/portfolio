@@ -1,3 +1,5 @@
+@import '../variables.css';
+
 .home-page {
     width: min(1120px, calc(100% - 2rem));
     margin: 0 auto;
@@ -9,12 +11,12 @@
     overflow: hidden;
     margin-top: 1.5rem;
     padding: clamp(2rem, 5vw, 4rem);
-    border: 1px solid rgba(255, 255, 255, 0.08);
-    border-radius: 32px;
-    background:
-        radial-gradient(circle at top right, rgba(255, 255, 255, 0.08), transparent 24%),
-        linear-gradient(145deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.02));
-    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.28);
+    border: 1px solid var(--color-border-red);
+    border-radius: var(--radius-xl);
+    background: linear-gradient(135deg, rgba(15, 20, 25, 0.9), rgba(26, 31, 38, 0.9)), 
+                radial-gradient(circle at top right, rgba(255, 23, 68, 0.08), transparent 30%);
+    box-shadow: var(--shadow-lg), inset 0 1px 0 rgba(255, 23, 68, 0.1);
+    animation: fadeInUp 0.8s var(--transition-smooth);
 }
 
 .home-hero__orbit {
@@ -25,16 +27,18 @@
 
 .tech-float {
     position: absolute;
-    padding: 0.6rem 1rem;
-    border: 1px solid rgba(255, 255, 255, 0.08);
-    border-radius: 999px;
-    background: rgba(255, 255, 255, 0.04);
-    color: rgba(255, 255, 255, 0.78);
-    font-size: 0.82rem;
-    font-weight: 700;
-    letter-spacing: 0.04em;
-    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.22);
-    backdrop-filter: blur(8px);
+    padding: 0.5rem 0.9rem;
+    border: 1px solid var(--color-border-red);
+    border-radius: var(--radius-full);
+    background: rgba(255, 23, 68, 0.08);
+    color: var(--color-red-vibrant);
+    font-size: 0.75rem;
+    font-weight: var(--font-weight-bold);
+    letter-spacing: 0.03em;
+    text-transform: capitalize;
+    box-shadow: 0 8px 20px rgba(255, 23, 68, 0.12);
+    backdrop-filter: blur(12px);
+    animation: float 6s ease-in-out infinite;
 }
 
 .tech-float--1 {
@@ -88,14 +92,15 @@
     display: inline-block;
     margin-bottom: 1rem;
     padding: 0.45rem 0.9rem;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 999px;
-    background: rgba(255, 255, 255, 0.04);
-    color: rgba(255, 255, 255, 0.78);
-    font-size: 0.82rem;
-    font-weight: 700;
+    border: 1px solid var(--color-border-red);
+    border-radius: var(--radius-full);
+    background: rgba(255, 23, 68, 0.06);
+    color: var(--color-red-primary);
+    font-size: 0.78rem;
+    font-weight: var(--font-weight-bold);
     letter-spacing: 0.08em;
     text-transform: uppercase;
+    animation: slideInLeft 0.6s var(--transition-smooth) 0.2s backwards;
 }
 
 .home-hero h1 {
@@ -103,6 +108,7 @@
     font-size: clamp(2.2rem, 6vw, 4.5rem);
     line-height: 0.98;
     letter-spacing: -0.04em;
+    animation: slideInLeft 0.6s var(--transition-smooth) 0.3s backwards;
 }
 
 .home-hero__intro {
@@ -111,6 +117,57 @@
     color: var(--text-soft);
     font-size: 1.08rem;
     line-height: 1.8;
+    animation: fadeInUp 0.6s var(--transition-smooth) 0.4s backwards;
+}
+
+.gradient-text {
+    background: linear-gradient(90deg, var(--color-red-primary), var(--color-purple-secondary));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    display: inline-block;
+    position: relative;
+}
+
+.hero-cta {
+    margin-top: 1.25rem;
+    animation: fadeInUp 0.6s var(--transition-smooth) 0.5s backwards;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 0.9rem 1.4rem;
+    background: linear-gradient(135deg, var(--color-red-primary), var(--color-purple-secondary));
+    color: var(--color-white);
+    border: 1px solid var(--color-red-primary);
+    border-radius: var(--radius-full);
+    font-weight: var(--font-weight-bold);
+    text-decoration: none;
+    box-shadow: var(--shadow-red);
+    transition: all var(--transition-smooth);
+    position: relative;
+    overflow: hidden;
+}
+
+.cta-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.2);
+    transition: left var(--transition-smooth);
+    z-index: 0;
+}
+
+.cta-button:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-red), inset 0 0 16px rgba(156, 39, 176, 0.2);
+}
+
+.cta-button:hover::before {
+    left: 100%;
 }
 
 .home-grid {
@@ -122,11 +179,20 @@
 
 .home-card {
     padding: 1.6rem;
-    border: 1px solid rgba(255, 255, 255, 0.08);
-    border-radius: 24px;
-    background: rgba(255, 255, 255, 0.03);
-    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.2);
+    border: 1px solid var(--color-border-red);
+    border-radius: var(--radius-lg);
+    background: rgba(255, 23, 68, 0.04);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.16), inset 0 1px 0 rgba(255, 23, 68, 0.08);
     backdrop-filter: blur(10px);
+    animation: fadeInUp 0.6s var(--transition-smooth) forwards;
+    opacity: 0;
+    transition: all var(--transition-smooth);
+}
+
+.home-card:hover {
+    border-color: var(--color-red-primary);
+    box-shadow: var(--shadow-red), inset 0 1px 0 rgba(255, 23, 68, 0.15);
+    transform: translateY(-4px);
 }
 
 .home-card--wide {
@@ -154,14 +220,21 @@
 .tech-pill {
     display: inline-flex;
     align-items: center;
-    padding: 0.65rem 1rem;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 999px;
-    background: rgba(255, 255, 255, 0.05);
-    color: rgba(255, 255, 255, 0.88);
-    font-size: 0.88rem;
-    font-weight: 700;
-    letter-spacing: 0.03em;
+    padding: 0.6rem 0.95rem;
+    border: 1px solid var(--color-border-red);
+    border-radius: var(--radius-full);
+    background: rgba(255, 23, 68, 0.06);
+    color: var(--color-red-vibrant);
+    font-size: 0.85rem;
+    font-weight: var(--font-weight-medium);
+    letter-spacing: 0.02em;
+    transition: all var(--transition-fast);
+}
+
+.tech-pill:hover {
+    background: rgba(255, 23, 68, 0.12);
+    border-color: var(--color-red-primary);
+    transform: translateY(-2px);
 }
 
 @media (max-width: 768px) {
