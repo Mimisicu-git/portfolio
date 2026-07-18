@@ -1,0 +1,37 @@
+@import './Styles/variables.css';
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  background:
+    linear-gradient(90deg, rgba(255, 247, 237, 0.035) 1px, transparent 1px),
+    linear-gradient(180deg, rgba(255, 247, 237, 0.03) 1px, transparent 1px),
+    radial-gradient(circle at 78% 8%, rgba(245, 158, 11, 0.2), transparent 28%),
+    radial-gradient(circle at 10% 86%, rgba(251, 113, 133, 0.12), transparent 30%),
+    linear-gradient(135deg, var(--color-dark), var(--color-dark-light));
+  background-size: 72px 72px, 72px 72px, auto, auto, auto;
+  color: var(--color-text-main);
+  font-family: Inter, "Segoe UI", sans-serif;
+  line-height: 1.6;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(120deg, transparent 0 48%, rgba(245, 158, 11, 0.08) 48% 49%, transparent 49% 100%);
+}
+
+::selection {
+  background: rgba(245, 158, 11, 0.36);
+  color: var(--color-white);
+}

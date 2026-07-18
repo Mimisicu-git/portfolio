@@ -1,0 +1,42 @@
+/* Sunset Architect */
+:root {
+  --color-dark: #17110d;
+  --color-dark-light: #2a1f18;
+  --color-panel: rgba(255, 247, 237, 0.08);
+  --color-panel-strong: rgba(255, 247, 237, 0.14);
+  --color-accent-primary: #f59e0b;
+  --color-accent-secondary: #fb7185;
+  --color-accent-third: #a78bfa;
+  --color-white: #fff7ed;
+  --color-text-main: #fff7ed;
+  --color-text-soft: #e7c6ae;
+  --text-main: var(--color-text-main);
+  --text-soft: var(--color-text-soft);
+  --color-border-soft: rgba(255, 247, 237, 0.12);
+  --color-border-accent: rgba(245, 158, 11, 0.34);
+  --shadow-lg: 0 22px 60px rgba(12, 8, 5, 0.34);
+  --shadow-accent: 0 18px 44px rgba(245, 158, 11, 0.18);
+  --radius-xl: 18px;
+  --radius-full: 999px;
+  --transition-smooth: 0.28s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(22px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideInLeft {
+  from { opacity: 0; transform: translateX(-22px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes driftLine {
+  0%, 100% { transform: translate3d(0, 0, 0) rotate(-8deg); }
+  50% { transform: translate3d(18px, -12px, 0) rotate(-3deg); }
+}
+
+@keyframes pulseEdge {
+  0%, 100% { opacity: 0.36; }
+  50% { opacity: 0.78; }
+}
