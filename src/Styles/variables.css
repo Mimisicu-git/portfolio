@@ -1,0 +1,40 @@
+/* Retro Future Neon */
+:root {
+  --bg-main: #07020d;
+  --bg-deep: #11051f;
+  --panel: rgba(13, 4, 24, 0.78);
+  --panel-strong: rgba(23, 6, 39, 0.86);
+  --panel-soft: rgba(255, 255, 255, 0.045);
+  --neon-violet: #a855f7;
+  --neon-red: #ff2d55;
+  --neon-pink: #ff3cac;
+  --neon-blue: #38bdf8;
+  --text-main: #fff4ff;
+  --text-soft: rgba(255, 224, 244, 0.72);
+  --border-soft: rgba(255, 255, 255, 0.1);
+  --border-neon: rgba(255, 45, 85, 0.42);
+  --shadow-panel: 0 24px 70px rgba(0, 0, 0, 0.45);
+  --shadow-neon: 0 0 28px rgba(255, 45, 85, 0.22), 0 0 58px rgba(168, 85, 247, 0.18);
+  --radius-panel: 18px;
+  --transition-neon: 0.28s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(22px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes neonPulse {
+  0%, 100% { opacity: 0.58; filter: drop-shadow(0 0 8px rgba(255, 45, 85, 0.34)); }
+  50% { opacity: 1; filter: drop-shadow(0 0 16px rgba(168, 85, 247, 0.55)); }
+}
+
+@keyframes scanMove {
+  from { transform: translateX(-100%); }
+  to { transform: translateX(100%); }
+}
+
+@keyframes floatSignal {
+  0%, 100% { transform: translateY(0) skewX(-8deg); }
+  50% { transform: translateY(-10px) skewX(-8deg); }
+}

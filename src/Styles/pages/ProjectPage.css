@@ -5,37 +5,56 @@
 }
 
 .project-hero {
-    padding: clamp(2rem, 5vw, 3.5rem);
-    border: 1px solid rgba(255, 255, 255, 0.08);
-    border-radius: 32px;
+    position: relative;
+    overflow: hidden;
+    padding: clamp(2rem, 5vw, 3.8rem);
+    border: 1px solid var(--border-soft);
+    border-left: 4px solid var(--neon-violet);
+    border-radius: 4px 26px 26px 4px;
     background:
-        radial-gradient(circle at top right, rgba(131, 194, 255, 0.18), transparent 26%),
-        linear-gradient(150deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.02));
-    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.28);
+        linear-gradient(120deg, rgba(168, 85, 247, 0.18), transparent 34%),
+        radial-gradient(circle at 86% 14%, rgba(255, 45, 85, 0.18), transparent 22rem),
+        var(--panel);
+    box-shadow: var(--shadow-panel), var(--shadow-neon);
+    animation: fadeInUp 0.7s ease both;
+}
+
+.project-hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background: repeating-linear-gradient(0deg, rgba(255, 244, 255, 0.035) 0 1px, transparent 1px 8px);
 }
 
 .project-hero__eyebrow {
-    display: inline-block;
+    display: inline-flex;
     margin-bottom: 1rem;
-    padding: 0.45rem 0.9rem;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 999px;
-    background: rgba(255, 255, 255, 0.04);
-    color: rgba(255, 255, 255, 0.78);
-    font-size: 0.82rem;
-    font-weight: 700;
-    letter-spacing: 0.08em;
+    padding: 0.5rem 0.9rem;
+    border: 1px solid rgba(255, 45, 85, 0.36);
+    border-radius: 8px;
+    background: rgba(255, 45, 85, 0.1);
+    color: var(--neon-red);
+    font-size: 0.78rem;
+    font-weight: 900;
+    letter-spacing: 0.12em;
     text-transform: uppercase;
 }
 
 .project-hero h1 {
+    position: relative;
+    z-index: 1;
     margin: 0 0 1rem;
-    font-size: clamp(2.2rem, 6vw, 4rem);
-    line-height: 1;
-    letter-spacing: -0.04em;
+    color: var(--text-main);
+    font-size: clamp(2.4rem, 6vw, 4.6rem);
+    line-height: 0.94;
+    letter-spacing: 0;
+    text-shadow: 0 0 22px rgba(168, 85, 247, 0.32);
 }
 
 .project-hero p {
+    position: relative;
+    z-index: 1;
     margin: 0;
     max-width: 64ch;
     color: var(--text-soft);
@@ -45,19 +64,20 @@
 
 .project-timeline {
     position: relative;
-    margin-top: 2rem;
     display: grid;
     gap: 1.5rem;
+    margin-top: 2rem;
 }
 
 .project-timeline::before {
-    content: '';
+    content: "";
     position: absolute;
     top: 0;
     bottom: 0;
     left: 104px;
     width: 2px;
-    background: linear-gradient(180deg, rgba(131, 194, 255, 0.55), rgba(255, 255, 255, 0.08));
+    background: linear-gradient(180deg, var(--neon-red), var(--neon-violet), transparent);
+    box-shadow: 0 0 18px rgba(255, 45, 85, 0.45);
 }
 
 .timeline-card {
@@ -67,11 +87,12 @@
     gap: 1.5rem;
     align-items: start;
 }
-.timeline-card__content:hover{
-    cursor:pointer;
-    transform: translateY(-2px);
-    transition: transform 0.2s ease;
-    box-shadow: #dff1ff 0px 4px 12px, rgba(255, 255, 255, 0.1) 0px 8px 24px;
+
+.timeline-card__content:hover {
+    cursor: pointer;
+    transform: translateY(-5px);
+    border-color: var(--border-neon);
+    box-shadow: var(--shadow-panel), var(--shadow-neon);
 }
 
 .timeline-card__year-block {
@@ -82,12 +103,12 @@
 .timeline-card__year {
     display: inline-block;
     padding: 0.45rem 0.8rem;
-    border: 1px solid rgba(131, 194, 255, 0.28);
-    border-radius: 999px;
-    background: rgba(131, 194, 255, 0.1);
-    color: #dff1ff;
-    font-size: 0.92rem;
-    font-weight: 800;
+    border: 1px solid rgba(168, 85, 247, 0.36);
+    border-radius: 8px;
+    background: rgba(168, 85, 247, 0.1);
+    color: var(--text-main);
+    font-size: 0.9rem;
+    font-weight: 900;
     letter-spacing: 0.08em;
 }
 
@@ -97,21 +118,22 @@
     right: 17px;
     width: 14px;
     height: 14px;
-    border: 3px solid rgba(14, 18, 27, 1);
+    border: 3px solid var(--bg-main);
     border-radius: 50%;
-    background: #83c2ff;
-    box-shadow: 0 0 0 6px rgba(131, 194, 255, 0.12);
+    background: var(--neon-red);
+    box-shadow: 0 0 0 6px rgba(255, 45, 85, 0.16), 0 0 18px rgba(255, 45, 85, 0.6);
 }
 
 .timeline-card__content {
     padding: 1.5rem;
-    border: 1px solid rgba(255, 255, 255, 0.08);
-    border-radius: 28px;
+    border: 1px solid var(--border-soft);
+    border-radius: var(--radius-panel);
     background:
-        radial-gradient(circle at top right, rgba(131, 194, 255, 0.08), transparent 22%),
-        rgba(255, 255, 255, 0.03);
-    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.2);
-    backdrop-filter: blur(10px);
+        radial-gradient(circle at top right, rgba(168, 85, 247, 0.12), transparent 24%),
+        var(--panel);
+    box-shadow: var(--shadow-panel);
+    backdrop-filter: blur(12px);
+    transition: transform var(--transition-neon), border-color var(--transition-neon), box-shadow var(--transition-neon);
 }
 
 .timeline-card__header {
@@ -124,17 +146,18 @@
 .timeline-card__status {
     display: inline-block;
     margin-bottom: 0.65rem;
+    color: var(--neon-red);
     font-size: 0.78rem;
-    font-weight: 700;
+    font-weight: 900;
     letter-spacing: 0.12em;
     text-transform: uppercase;
 }
 
 .timeline-card__header h2 {
     margin: 0;
+    color: var(--text-main);
     font-size: clamp(1.5rem, 4vw, 2rem);
-    letter-spacing: -0.03em;
-    color: #83c2ff;
+    letter-spacing: 0;
 }
 
 .timeline-card__links {
@@ -144,26 +167,27 @@
 }
 
 .timeline-card__links a {
-    padding: 0.7rem 1rem;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 999px;
-    background: rgba(255, 255, 255, 0.04);
+    padding: 0.68rem 0.95rem;
+    border: 1px solid rgba(168, 85, 247, 0.28);
+    border-radius: 9px;
+    background: rgba(255, 255, 255, 0.045);
     color: var(--text-main);
     font-size: 0.92rem;
-    font-weight: 700;
+    font-weight: 900;
     text-decoration: none;
-    transition: transform 0.2s ease, border-color 0.2s ease, background-color 0.2s ease;
+    transition: transform var(--transition-neon), border-color var(--transition-neon), background var(--transition-neon), box-shadow var(--transition-neon);
 }
 
 .timeline-card__links a:hover {
     transform: translateY(-2px);
-    border-color: rgba(131, 194, 255, 0.4);
-    background: rgba(131, 194, 255, 0.12);
+    border-color: var(--border-neon);
+    background: rgba(255, 45, 85, 0.12);
+    box-shadow: 0 0 18px rgba(255, 45, 85, 0.2);
 }
 
 .timeline-card__intro {
     margin: 1rem 0 0;
-    color: var(--text-main);
+    color: var(--text-soft);
     font-size: 1.02rem;
     line-height: 1.8;
 }
@@ -177,12 +201,12 @@
 
 .timeline-card__stack span {
     padding: 0.45rem 0.8rem;
-    border: 1px solid rgba(255, 255, 255, 0.08);
-    border-radius: 999px;
-    background: rgba(255, 255, 255, 0.05);
-    color: rgba(255, 255, 255, 0.84);
+    border: 1px solid rgba(255, 45, 85, 0.2);
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.045);
+    color: var(--text-soft);
     font-size: 0.88rem;
-    font-weight: 700;
+    font-weight: 800;
 }
 
 @media (max-width: 768px) {
@@ -193,7 +217,8 @@
 
     .project-hero {
         padding: 1.5rem;
-        border-radius: 24px;
+        border-left-width: 1px;
+        border-radius: 18px;
     }
 
     .project-timeline::before {
@@ -218,11 +243,9 @@
 
     .timeline-card__content {
         padding: 1.25rem;
-        border-radius: 24px;
     }
 
     .timeline-card__header {
         flex-direction: column;
     }
-
 }
