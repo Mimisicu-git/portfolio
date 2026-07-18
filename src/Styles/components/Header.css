@@ -1,9 +1,10 @@
+@import '../variables.css';
+
 :root {
-    --bg-panel: rgba(12, 12, 12, 0.82);
-    --border-soft: rgba(255, 255, 255, 0.08);
-    --accent: #f4f4f5;
-    --accent-strong: #ffffff;
-    --shadow-lg: 0 18px 50px rgba(0, 0, 0, 0.35);
+    --bg-panel: rgba(15, 20, 25, 0.8);
+    --border-soft: var(--color-border-soft);
+    --text-soft: var(--color-text-soft);
+    --text-main: var(--color-text-main);
 }
 
 .site-header {
@@ -17,11 +18,12 @@
     width: min(1120px, calc(100% - 2rem));
     margin: 1rem auto 0;
     padding: 1rem 1.4rem;
-    border: 1px solid var(--border-soft);
-    border-radius: 22px;
+    border: 1px solid var(--color-border-soft);
+    border-radius: var(--radius-xl);
     background: var(--bg-panel);
     backdrop-filter: blur(16px);
     box-shadow: var(--shadow-lg);
+    animation: fadeInDown 0.6s var(--transition-smooth);
 }
 
 .header-brand {
@@ -45,10 +47,16 @@
 .header-avatar {
     width: 52px;
     height: 52px;
-    border: 1px solid rgba(255, 255, 255, 0.12);
+    border: 2px solid var(--color-violet-primary);
     border-radius: 50%;
     object-fit: cover;
-    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.24);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2), inset 0 0 0 1px rgba(124, 58, 237, 0.2);
+    transition: transform var(--transition-smooth), box-shadow var(--transition-smooth);
+}
+
+.header-avatar:hover {
+    transform: scale(1.06);
+    box-shadow: var(--shadow-violet), inset 0 0 12px rgba(124, 58, 237, 0.15);
 }
 
 .header-brand h1 {
@@ -56,7 +64,12 @@
     font-size: clamp(1.2rem, 2.2vw, 1.8rem);
     line-height: 1.1;
     letter-spacing: 0.04em;
-    color: #83c2ff;
+    color: var(--color-text-main);
+    background: linear-gradient(135deg, var(--color-violet-primary), var(--color-indigo-secondary));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: slideInLeft 0.6s var(--transition-smooth) 0.1s backwards;
 }
 
 .brand-kicker {
@@ -65,6 +78,11 @@
     letter-spacing: 0.24em;
     text-transform: uppercase;
     color: rgba(255, 255, 255, 0.6);
+    transition: color var(--transition-fast);
+}
+
+.header-brand:hover .brand-kicker {
+    color: var(--color-violet-primary);
 }
 
 .header-nav {
@@ -77,20 +95,37 @@
 .header-nav a {
     position: relative;
     padding: 0.75rem 1rem;
-    border: 1px solid transparent;
-    border-radius: 999px;
+    border: 1px solid var(--color-border-soft);
+    border-radius: var(--radius-full);
     color: var(--text-soft);
     text-decoration: none;
     font-weight: 700;
-    transition: transform 0.2s ease, background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+    background: rgba(124, 58, 237, 0.02);
+    overflow: hidden;
+    transition: all var(--transition-smooth);
+}
+
+.header-nav a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, var(--color-violet-primary), var(--color-indigo-secondary));
+    transition: left var(--transition-smooth);
+    z-index: -1;
 }
 
 .header-nav a:hover {
     transform: translateY(-2px);
-    color: var(--text-main);
-    border-color: rgba(255, 255, 255, 0.12);
-    background: rgba(255, 255, 255, 0.05);
-    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.28);
+    color: var(--color-white);
+    border-color: var(--color-violet-primary);
+    box-shadow: var(--shadow-violet);
+}
+
+.header-nav a:hover::before {
+    left: 0;
 }
 
 .header-nav a.active {
