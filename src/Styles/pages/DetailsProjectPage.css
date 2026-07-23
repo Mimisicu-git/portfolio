@@ -17,7 +17,7 @@
 }
 
 .details-back-link:hover {
-    color: #dff1ff;
+    color: #ffe8e8;
     transform: translateX(-3px);
 }
 
@@ -29,7 +29,7 @@
     border: 1px solid rgba(255, 255, 255, 0.08);
     border-radius: 32px;
     background:
-        radial-gradient(circle at top right, rgba(131, 194, 255, 0.18), transparent 26%),
+        radial-gradient(circle at top right, rgba(187, 11, 11, 0.16), transparent 26%),
         linear-gradient(150deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.02));
     box-shadow: 0 20px 60px rgba(0, 0, 0, 0.28);
 }
@@ -51,7 +51,7 @@
 
 .details-hero h1 {
     margin: 0 0 1rem;
-    color: #83c2ff;
+    color: #BB0B0B;
     font-size: clamp(2.2rem, 6vw, 4rem);
     line-height: 1;
 }
@@ -73,10 +73,10 @@
 
 .details-hero__meta span {
     padding: 0.75rem 1rem;
-    border: 1px solid rgba(131, 194, 255, 0.25);
+    border: 1px solid rgba(187, 11, 11, 0.25);
     border-radius: 18px;
-    background: rgba(131, 194, 255, 0.08);
-    color: #dff1ff;
+    background: rgba(187, 11, 11, 0.1);
+    color: #ffe8e8;
     font-weight: 800;
     text-align: center;
 }
@@ -98,7 +98,7 @@
     border: 1px solid rgba(255, 255, 255, 0.08);
     border-radius: 28px;
     background:
-        radial-gradient(circle at top right, rgba(131, 194, 255, 0.08), transparent 24%),
+        radial-gradient(circle at top right, rgba(187, 11, 11, 0.1), transparent 24%),
         rgba(255, 255, 255, 0.03);
     box-shadow: 0 16px 40px rgba(0, 0, 0, 0.2);
     backdrop-filter: blur(10px);
@@ -171,15 +171,15 @@
 
 .details-link--primary,
 .details-links a:first-child {
-    border-color: rgba(131, 194, 255, 0.28);
-    background: rgba(131, 194, 255, 0.12);
+    border-color: rgba(187, 11, 11, 0.28);
+    background: rgba(187, 11, 11, 0.14);
 }
 
 .details-link:hover,
 .details-links a:hover {
     transform: translateY(-2px);
-    border-color: rgba(131, 194, 255, 0.4);
-    background: rgba(131, 194, 255, 0.12);
+    border-color: rgba(187, 11, 11, 0.4);
+    background: rgba(187, 11, 11, 0.14);
 }
 
 @media (max-width: 860px) {

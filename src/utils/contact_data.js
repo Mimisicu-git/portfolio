@@ -3,6 +3,7 @@ export const contactItems = [
         label: 'Mail',
         value: 'remy.sopena@gmail.com',
         href: 'mailto:remy.sopena@gmail.com',
+        image: '/src/assets/contact/Gmail.svg',
         fallback: 'M',
     },
     {

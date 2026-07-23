@@ -4,15 +4,15 @@ import '../Styles/pages/HomePage.css';
 import { NavLink } from 'react-router-dom';
 
 const HomePage = () => {
-    const floatingTechs = ['HTML', 'CSS', 'JavaScript', 'React', 'PHP', 'Python', 'Java'];
-    const techStack = ['HTML', 'CSS', 'JavaScript', 'React', 'PHP', 'SQL', 'Rust', 'Java', 'C', 'Python', 'Git'];
+    const floatingTechs = ['CSS', 'JavaScript', 'React', 'SQL', 'PHP', 'Python', 'Java', 'Rust'];
+    const techStack = ['CSS', 'JavaScript', 'React', 'PHP', 'SQL', 'Rust', 'Java', 'C', 'Python', 'Git'];
 
     return (
         <>
             <Header />
             <main className="home-page">
-                <section className="home-hero">
-                    <div className="home-hero__orbit" aria-hidden="true">
+                <section className="banner">
+                    <div className="banner__orbit">
                         {floatingTechs.map((tech, index) => (
                             <span
                                 key={tech}
@@ -22,16 +22,12 @@ const HomePage = () => {
                             </span>
                         ))}
                     </div>
-                    <div className="home-hero__layout">
-                        <div className="home-hero__content">
-                            <span className="home-hero__eyebrow">Développeur en formation</span>
-                            <h1>Bienvenue sur mon portfolio</h1>
-                            <p className="home-hero__intro">
-                                Je suis Remy Sopena, étudiant en dernière année de BUT Informatique à l'IUT de Valence.
-                                J'aime concevoir des interfaces utiles, développer des applications web solides et
-                                transformer des idées en projets concrets.
-                            </p>
-                        </div>
+                    <div className="banner__content">
+                        <span className="banner__eyebrow">Développeur informatique</span>
+                        <h1>Bienvenue sur mon portfolio</h1>
+                        <p>
+                            Je suis Remy Sopena, jeune développeur freelance apres un BUT Informatique à l'IUT de Valence.
+                        </p>
                     </div>
                 </section>
 
@@ -47,12 +43,12 @@ const HomePage = () => {
                     </article>
 
                     <article className="home-card">
-                        <h2>Mes études</h2>
+                        <h2>Mon parcours</h2>
                         <p>
                             J'ai obtenu mon baccalauréat STI2D au lycée Saint-Denis d'Annonay en 2023, puis
                             j'ai intégré le BUT Informatique à l'IUT de Valence. Durant ces trois années,
-                            j'ai mené plusieurs <NavLink to="/projects">projets</NavLink> et réalisé un stage de 7 semaines au centre social du
-                            Roussillonnais. Aujourd'hui, je suis à la recherche d'un stage pour cet été.
+                            j'ai mené plusieurs <strong><NavLink to="/projects">projets</NavLink></strong> et réalisé un stage de 7 semaines au centre social du
+                            Roussillonnais. Apres quoi je me sui lancé en freelance dans le développement full-stack.
                         </p>
                     </article>
 
@@ -67,7 +63,7 @@ const HomePage = () => {
                             expériences m'ont permis de construire une base technique solide avec une approche
                             centrée sur l'utilisateur.
                         </p>
-                        <div className="tech-stack" aria-label="Technologies">
+                        <div className="tech-stack">
                             {techStack.map((tech) => (
                                 <span key={tech} className="tech-pill">
                                     {tech}

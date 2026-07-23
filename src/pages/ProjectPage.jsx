@@ -23,13 +23,13 @@ const ProjectPage = () => {
                 </p>
             </section>
 
-            <section className="project-timeline" aria-label="Frise chronologique des projets">
+            <section className="project-timeline">
 
                 {projects.sort((a,b) => b.year - a.year).map((project) => (
                     <article key={project.id} className="timeline-card">
                         <div className="timeline-card__year-block">
                             <span className="timeline-card__year">{project.year}</span>
-                            <span className="timeline-card__dot" aria-hidden="true" />
+                            <span className="timeline-card__dot"/>
                         </div>
 
                         <div className="timeline-card__content" onClick={() => redirect(project)}>
@@ -54,7 +54,7 @@ const ProjectPage = () => {
 
                             <p className="timeline-card__intro">{project.shortDescription}</p>
 
-                            <div className="timeline-card__stack" aria-label="Technologies utilisees">
+                            <div className="timeline-card__stack">
                                 {project.stack.map((tech) => (
                                     <span key={tech}>{tech}</span>
                                 ))}

@@ -9,7 +9,7 @@
     border: 1px solid rgba(255, 255, 255, 0.08);
     border-radius: 32px;
     background:
-        radial-gradient(circle at top right, rgba(255, 255, 255, 0.08), transparent 24%),
+        radial-gradient(circle at top right, rgba(187, 11, 11, 0.14), transparent 24%),
         linear-gradient(145deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.02));
     box-shadow: 0 20px 60px rgba(0, 0, 0, 0.28);
 }
@@ -66,8 +66,8 @@
 
 .contact-card:hover {
     transform: translateY(-4px);
-    border-color: rgba(255, 255, 255, 0.14);
-    background: rgba(255, 255, 255, 0.05);
+    border-color: rgba(187, 11, 11, 0.26);
+    background: rgba(187, 11, 11, 0.1);
     box-shadow: 0 20px 48px rgba(0, 0, 0, 0.28);
 }
 
@@ -77,9 +77,9 @@
     flex: 0 0 64px;
     width: 64px;
     height: 64px;
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(187, 11, 11, 0.18);
     border-radius: 20px;
-    background: linear-gradient(145deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.03));
+    background: linear-gradient(145deg, rgba(187, 11, 11, 0.14), rgba(255, 255, 255, 0.03));
     overflow: hidden;
 }
 

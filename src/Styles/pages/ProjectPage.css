@@ -9,7 +9,7 @@
     border: 1px solid rgba(255, 255, 255, 0.08);
     border-radius: 32px;
     background:
-        radial-gradient(circle at top right, rgba(131, 194, 255, 0.18), transparent 26%),
+        radial-gradient(circle at top right, rgba(187, 11, 11, 0.16), transparent 26%),
         linear-gradient(150deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.02));
     box-shadow: 0 20px 60px rgba(0, 0, 0, 0.28);
 }
@@ -57,7 +57,7 @@
     bottom: 0;
     left: 104px;
     width: 2px;
-    background: linear-gradient(180deg, rgba(131, 194, 255, 0.55), rgba(255, 255, 255, 0.08));
+    background: linear-gradient(180deg, rgba(187, 11, 11, 0.45), rgba(255, 255, 255, 0.08));
 }
 
 .timeline-card {
@@ -71,7 +71,7 @@
     cursor:pointer;
     transform: translateY(-2px);
     transition: transform 0.2s ease;
-    box-shadow: #dff1ff 0px 4px 12px, rgba(255, 255, 255, 0.1) 0px 8px 24px;
+    box-shadow: rgba(187, 11, 11, 0.24) 0px 4px 12px, rgba(255, 255, 255, 0.06) 0px 8px 24px;
 }
 
 .timeline-card__year-block {
@@ -82,10 +82,10 @@
 .timeline-card__year {
     display: inline-block;
     padding: 0.45rem 0.8rem;
-    border: 1px solid rgba(131, 194, 255, 0.28);
+    border: 1px solid rgba(187, 11, 11, 0.28);
     border-radius: 999px;
-    background: rgba(131, 194, 255, 0.1);
-    color: #dff1ff;
+    background: rgba(187, 11, 11, 0.12);
+    color: #ffe8e8;
     font-size: 0.92rem;
     font-weight: 800;
     letter-spacing: 0.08em;
@@ -99,8 +99,8 @@
     height: 14px;
     border: 3px solid rgba(14, 18, 27, 1);
     border-radius: 50%;
-    background: #83c2ff;
-    box-shadow: 0 0 0 6px rgba(131, 194, 255, 0.12);
+    background: #BB0B0B;
+    box-shadow: 0 0 0 6px rgba(187, 11, 11, 0.14);
 }
 
 .timeline-card__content {
@@ -108,7 +108,7 @@
     border: 1px solid rgba(255, 255, 255, 0.08);
     border-radius: 28px;
     background:
-        radial-gradient(circle at top right, rgba(131, 194, 255, 0.08), transparent 22%),
+        radial-gradient(circle at top right, rgba(187, 11, 11, 0.1), transparent 22%),
         rgba(255, 255, 255, 0.03);
     box-shadow: 0 16px 40px rgba(0, 0, 0, 0.2);
     backdrop-filter: blur(10px);
@@ -134,7 +134,7 @@
     margin: 0;
     font-size: clamp(1.5rem, 4vw, 2rem);
     letter-spacing: -0.03em;
-    color: #83c2ff;
+    color: #BB0B0B;
 }
 
 .timeline-card__links {
@@ -157,8 +157,8 @@
 
 .timeline-card__links a:hover {
     transform: translateY(-2px);
-    border-color: rgba(131, 194, 255, 0.4);
-    background: rgba(131, 194, 255, 0.12);
+    border-color: rgba(187, 11, 11, 0.4);
+    background: rgba(187, 11, 11, 0.14);
 }
 
 .timeline-card__intro {

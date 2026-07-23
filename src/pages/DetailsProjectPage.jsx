@@ -50,7 +50,7 @@ const DetailsProject = () => {
                     </div>
                 </section>
 
-                <section className="details-layout" aria-label="Details du projet">
+                <section className="details-layout">
                     <div className="details-content">
 
                         <article className="details-section">
@@ -66,7 +66,7 @@ const DetailsProject = () => {
                         </article>
                     </div>
 
-                    <aside className="details-sidebar" aria-label="Informations du projet">
+                    <aside className="details-sidebar">
                         <div className="details-sidebar__block">
                             <h2>Technologies</h2>
                             <div className="details-stack">

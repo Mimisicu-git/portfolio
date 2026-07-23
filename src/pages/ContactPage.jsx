@@ -25,7 +25,7 @@ const ContactPage = () => {
                             target={item.href.startsWith('http') ? '_blank' : undefined}
                             rel={item.href.startsWith('http') ? 'noreferrer' : undefined}
                         >
-                            <div className="contact-card__icon" aria-hidden="true">
+                            <div className="contact-card__icon">
                                 {item.image ? (
                                     <img
                                         src={item.image}

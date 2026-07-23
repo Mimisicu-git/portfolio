@@ -4,20 +4,19 @@
     padding: 2rem 0 4rem;
 }
 
-.home-hero {
+.banner {
     position: relative;
-    overflow: hidden;
     margin-top: 1.5rem;
     padding: clamp(2rem, 5vw, 4rem);
     border: 1px solid rgba(255, 255, 255, 0.08);
     border-radius: 32px;
     background:
-        radial-gradient(circle at top right, rgba(255, 255, 255, 0.08), transparent 24%),
+        radial-gradient(circle at top right, rgba(187, 11, 11, 0.15), transparent 24%),
         linear-gradient(145deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.02));
     box-shadow: 0 20px 60px rgba(0, 0, 0, 0.28);
 }
 
-.home-hero__orbit {
+.banner__orbit {
     position: absolute;
     inset: 0;
     pointer-events: none;
@@ -33,7 +32,7 @@
     font-size: 0.82rem;
     font-weight: 700;
     letter-spacing: 0.04em;
-    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.22);
+    box-shadow: -3px 12px 30px rgba(0, 0, 0, 0.22);
     backdrop-filter: blur(8px);
 }
 
@@ -53,8 +52,8 @@
 }
 
 .tech-float--4 {
-    bottom: 7rem;
-    right: 2rem;
+    bottom: 6.5rem;
+    right: 2.5rem;
 }
 
 .tech-float--5 {
@@ -72,19 +71,18 @@
     left: 70%;
 }
 
-.home-hero__content {
+.tech-float--8 {
+    top: 10rem;
+    left: 82%;
+}
+
+.banner__content {
     position: relative;
     max-width: 760px;
     z-index: 1;
 }
 
-.home-hero__layout {
-    position: relative;
-    z-index: 1;
-    display: block;
-}
-
-.home-hero__eyebrow {
+.banner__eyebrow {
     display: inline-block;
     margin-bottom: 1rem;
     padding: 0.45rem 0.9rem;
@@ -98,14 +96,14 @@
     text-transform: uppercase;
 }
 
-.home-hero h1 {
+.banner h1 {
     margin: 0 0 1rem;
     font-size: clamp(2.2rem, 6vw, 4.5rem);
-    line-height: 0.98;
+    line-height: 0.95;
     letter-spacing: -0.04em;
 }
 
-.home-hero__intro {
+.banner p {
     margin: 0;
     max-width: 62ch;
     color: var(--text-soft);
@@ -146,7 +144,6 @@
 
 .tech-stack {
     display: flex;
-    flex-wrap: wrap;
     gap: 0.75rem;
     margin-top: 1.4rem;
 }
@@ -170,7 +167,7 @@
         padding-bottom: 2.5rem;
     }
 
-    .home-hero {
+    .banner {
         margin-top: 1rem;
         padding: 1.5rem;
         border-radius: 24px;
@@ -184,7 +181,7 @@
         grid-column: auto;
     }
 
-    .home-hero__orbit {
+    .banner__orbit {
         position: relative;
         display: flex;
         flex-wrap: wrap;
