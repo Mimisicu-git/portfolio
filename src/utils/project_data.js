@@ -59,7 +59,7 @@ export const projects =
     },
     {
         id: 'Aramis',
-        year: 2025,
+        year: 2026,
         title: 'Aramis',
         shortDescription: "Projet web de gestion des commandes et visualisation de palettes pour un entrepot.",
         details: {
@@ -102,11 +102,11 @@ export const projects =
         shortDescription: 'Un site de recommandations de films personnalisees selon l\'humeur de l\'utilisateur.',
         details: {
             description :
-                "Moodvie utilise une API externe meteo pour recuperer les informations sur le temps et adapter les recommandations en fonction d'une humeur associee de films en consequence.",
+                "Utilise une API externe meteo pour recuperer les informations sur le temps et adapter les recommandations en fonction d'une humeur associee de films en consequence.",
             learning:
                 "Le projet m'a permis de m'exercer sur l'utilisation et l'integration dAPI externes, ainsi que la creation d'API en rust pour le backend et la gestion de la communication entre le front et le back-end notement avec la technologie MQTT.",
-            works:
-                "Le projets a été decouper en 3 parties : 1. Une API MoodEngine qui part d'une latitude et longitude l'envoie a l'API d'OpenMeteo en HTTP et recupere une temperature un code meteo un taux d'humidité et la vitesse du vent pour definir une humeur (un mood). 2. Une API MovieRecommander qui récupere l'humeur donnée par l'API MoodEngine et grace a une liste d'association vas transformer l'humeur en genre de film ensuite l'API comunique avec l'API de TMDB pour recuperer une liste de 20 film a recomander. 3. Et d'un front qui contient une carte interactive qui permet de choisir le lieux ou prendre la meteo et ainsi l'envoyer a l'API MoodEngine puis recuperer les information de l'API MovieEngine et afficher de facon ergonomique la liste des films.",
+            features:
+                "Le projets a été decouper en 3 parties : 1. Une API MoodEngine qui apartir d'une latitude et longitude envoie une requete aà l'API d'OpenMeteo en HTTP et recupere une temperature, un code meteo, un taux d'humidité et la vitesse du vent pour definir une humeur (un mood). 2. Une API MovieRecommander qui récupere l'humeur donnée par l'API MoodEngine et grace a une liste d'association vas transformer l'humeur en genre de film ensuite l'API comunique avec l'API de TMDB pour recuperer une liste de 20 film a recomander. 3. Et d'un front qui contient une carte interactive qui permet de choisir le lieux ou prendre la meteo et ainsi l'envoyer a l'API MoodEngine puis recuperer les information de l'API MovieEngine et afficher de facon ergonomique la liste des films.",
 
         },
         stack: ['Rust', 'MQTT', 'React'],
