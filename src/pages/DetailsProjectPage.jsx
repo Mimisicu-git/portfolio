@@ -41,7 +41,7 @@ const DetailsProject = () => {
                     <div>
                         <span className="details-hero__eyebrow">{project.status}</span>
                         <h1>{project.title}</h1>
-                        <p>{project.shortDescription}</p>
+                        <p>{content.description}</p>
                     </div>
 
                     <div className="details-hero__meta">
@@ -52,11 +52,6 @@ const DetailsProject = () => {
 
                 <section className="details-layout" aria-label="Details du projet">
                     <div className="details-content">
-                        <article className="details-section">
-                            <span className="details-section__label">Description</span>
-                            <h2>Contexte du projet</h2>
-                            <p>{content.description}</p>
-                        </article>
 
                         <article className="details-section">
                             <span className="details-section__label">Apprentissage</span>
@@ -65,9 +60,9 @@ const DetailsProject = () => {
                         </article>
 
                         <article className="details-section">
-                            <span className="details-section__label">Realisation</span>
-                            <h2>Travail realise</h2>
-                            <p>{content.works}</p>
+                            <span className="details-section__label">Fonctionnalités</span>
+                            <h2>fonctionement</h2>
+                            <p>{content.features}</p>
                         </article>
                     </div>
 
